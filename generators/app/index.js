@@ -30,7 +30,7 @@ module.exports = yeoman.Base.extend({
 
     // Have Yeoman greet the user.
     this.log(yosay(
-      'Welcome to the ' + chalk.red('generator-react-material-redux') + ' generator!'
+      'Welcome to the ' + chalk.red('generator-react-ui') + ' generator!'
     ));
 
 
