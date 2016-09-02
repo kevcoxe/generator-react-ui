@@ -1,6 +1,6 @@
 {
   "name": "generator-react-ui",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A generator for creating react apps that use material-ui and redux.",
   "homepage": "kevcoxe.github.io/generator-react-ui",
   "author": {
@@ -47,9 +47,9 @@
       "mocha": true
     }
   },
-  "repository" : {
-    "type" : "git"
-    , "url" : "https://github.com/kevcoxe/generator-react-ui.git"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kevcoxe/generator-react-ui.git"
   },
   "scripts": {
     "prepublish": "gulp prepublish",
