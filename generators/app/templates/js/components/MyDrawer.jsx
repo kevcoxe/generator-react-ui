@@ -1,17 +1,12 @@
 'use strict';
 
 import React from 'react';
+
 import Drawer from 'material-ui/Drawer';
 import MenuItem from 'material-ui/MenuItem';
-import Divider from 'material-ui/Divider';
-import {Toolbar, ToolbarGroup, ToolbarSeparator, ToolbarTitle} from 'material-ui/Toolbar';
+import { Toolbar, ToolbarGroup, ToolbarTitle } from 'material-ui/Toolbar';
 import Subheader from 'material-ui/Subheader';
 import { Link } from 'react-router';
-
-import _ from 'lodash';
-import UI from 'UI';
-
-import MySnackbar from './MySnackbar.jsx';
 
 
 class MyDrawer extends React.Component {
@@ -29,21 +24,6 @@ class MyDrawer extends React.Component {
       this._handleSnackbarTouchTap();
     }
     this.props.handleClose();
-  }
-
-
-  _handleSnackbarTouchTap() {
-    this.setState({
-      open: true,
-      message: "You have an alert!"
-    });
-  }
-
-
-  _handleSnackbarRequestClose() {
-    this.setState({
-      open: false
-    });
   }
 
 
@@ -87,16 +67,7 @@ class MyDrawer extends React.Component {
 
           { routeLinks }
 
-          <Divider />
-
-          <Subheader>Random</Subheader>
-          <MenuItem onTouchTap={this._handleClose.bind(this, true)} style={{color: this.context.muiTheme.palette.accent1Color}}>Show Alert</MenuItem>
         </Drawer>
-        <MySnackbar
-          open={this.state.open}
-          handleRequestClose={this._handleSnackbarRequestClose.bind(this)}
-          message={this.state.message}
-        />
       </div>
     );
   }

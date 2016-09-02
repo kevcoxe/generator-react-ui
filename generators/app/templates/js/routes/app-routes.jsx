@@ -13,30 +13,30 @@ import routes from '../config/routes.json';
 const components = {};
 
 function requireComponents(routeName) {
-    const route = this[routeName.split('/').pop()];
+  const route = this[routeName.split('/').pop()];
 
-    const componentName   = routeName.split('/').map(_.camelCase).join('/');
-    components[routeName] = require(`../pages/${componentName}.jsx`).default;
+  const componentName   = routeName.split('/').map(_.camelCase).join('/');
+  components[routeName] = require(`../pages/${componentName}.jsx`).default;
 
-    if (_.isPlainObject(route.routes)) {
-      Object.keys(route.routes)
-        .map(subrouteName => `${routeName}/${subrouteName}`)
-        .map(requireComponents, route.routes);
-    }
+  if (_.isPlainObject(route.routes)) {
+    Object.keys(route.routes)
+      .map(subrouteName => `${routeName}/${subrouteName}`)
+      .map(requireComponents, route.routes);
+  }
 };
 
 function generateRoutes(routeName) {
-    const route = this[routeName.split('/').pop()];
+  const route = this[routeName.split('/').pop()];
 
-    return (
-        <Route path={route.path} component={components[routeName]} key={routeName}>
-            {_.isPlainObject(route.routes) ?
-              Object.keys(route.routes)
-              .map(subrouteName => `${routeName}/${subrouteName}`)
-              .map(generateRoutes, route.routes)
-                : null}
-        </Route>
-    )
+  return (
+    <Route path={route.path} component={components[routeName]} key={routeName}>
+      {_.isPlainObject(route.routes) ?
+        Object.keys(route.routes)
+        .map(subrouteName => `${routeName}/${subrouteName}`)
+        .map(generateRoutes, route.routes)
+        : null}
+      </Route>
+  )
 }
 
 Object.keys(routes).map(requireComponents, routes);

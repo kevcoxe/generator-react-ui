@@ -17,12 +17,26 @@ module.exports = yeoman.Base.extend({
 
 
   prompting: function () {
+    var self = this;
+
     var prompts = [
       {
         type: 'input',
         name: 'reducerName',
         message: 'Name of your reducer',
-        default: 'test'
+        default: 'test',
+        validate: function(name) {
+          if (!name) {
+            return 'Reducer name cannot be empty';
+          }
+          if (!/[\s\S]+/.test(name)) {
+            return 'Reducer name should only consist of a~z, A~Z';
+          }
+          if (self.newJson.reducers.indexOf(name) !== -1) {
+            return 'Reducer already exists';
+          }
+          return true;
+        }
       },
       {
         type: 'confirm',

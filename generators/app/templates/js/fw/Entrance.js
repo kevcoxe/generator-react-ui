@@ -5,7 +5,6 @@
  *
  */
 'use strict';
-import {Splash} from 'splash-screen';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router, hashHistory } from "react-router";
@@ -23,16 +22,6 @@ class Entrance {
         injectTapEventPlugin();
     }
 
-    _destroySplash() {
-        let _this = this;
-        Splash.destroy();
-        setTimeout(function() {
-            if (Splash.isRunning()) {
-                _this.destroySplash();
-            }
-        }, 100);
-    }
-
     launch() {
       ReactDOM.render(
         <Provider store={store}>
@@ -45,7 +34,6 @@ class Entrance {
 
     run() {
         this.beforeStart();
-        this._destroySplash();
         this.launch();
     }
 

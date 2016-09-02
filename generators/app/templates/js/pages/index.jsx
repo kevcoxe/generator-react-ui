@@ -1,9 +1,8 @@
 'use strict';
 
 import React from 'react';
-import { connect } from "react-redux";
-
-import MyCard from '../components/Card.jsx';
+import { Grid, Row, Col } from 'react-flexbox-grid';
+import MyCard from '../components/MyCard.jsx';
 
 class Index extends React.Component {
 
@@ -13,13 +12,19 @@ class Index extends React.Component {
 
   render() {
 
-    const title = this.props.title || "Title"
-
     return (
-      <div>
-        <MyCard title={title}/>
-        { this.props.children }
-      </div>
+      <Grid>
+        <br />
+        <Row>
+          <Col xs={12}>
+            <MyCard title={`Welcome!`}/>
+          </Col>
+
+          <Col xs={12}>
+            { this.props.children }
+          </Col>
+        </Row>
+      </Grid>
     );
   }
 }

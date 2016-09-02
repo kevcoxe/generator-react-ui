@@ -17,12 +17,26 @@ module.exports = yeoman.Base.extend({
 
 
   prompting: function () {
+    var self = this;
+
     var prompts = [
       {
         type: 'input',
         name: 'routeName',
         message: 'Enter your route (no child roots yet)',
-        default: 'about'
+        default: 'about',
+        validate: function(name) {
+          if (!name) {
+            return 'Route name cannot be empty';
+          }
+          if (!/[\s\S]+/.test(name)) {
+            return 'Route name should only consist of a~z, A~Z';
+          }
+          if (Object.keys(self.newJson).indexOf(name) !== -1) {
+            return 'Route already exists';
+          }
+          return true;
+        }
       },
     ];
 

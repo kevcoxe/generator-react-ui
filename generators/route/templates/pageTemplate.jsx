@@ -1,6 +1,8 @@
 'use strict';
 
 import React from 'react';
+import { Grid, Row, Col } from 'react-flexbox-grid';
+import MyCard from '../components/MyCard.jsx';
 
 class <%= componentName %> extends React.Component {
 
@@ -8,12 +10,21 @@ class <%= componentName %> extends React.Component {
     super(props);
   }
 
-
   render() {
+
     return (
-      <div>
-        <h1><%= name %></h1>
-      </div>
+      <Grid>
+        <br />
+        <Row>
+          <Col xs={12}>
+            <MyCard title={`<%= name %>`}/>
+          </Col>
+
+          <Col xs={12}>
+            { this.props.children }
+          </Col>
+        </Row>
+      </Grid>
     );
   }
 }

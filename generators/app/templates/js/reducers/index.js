@@ -4,9 +4,7 @@ import { combineReducers } from "redux";
 import reduxData from '../config/redux.json';
 import test from './testReducer.js';
 
-const components = {
-  test
-};
+const components = {};
 
 function requireReducers(reducerName) {
 
