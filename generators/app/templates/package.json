@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "description": "This is for dev, for production look at _package.json",
   "scripts": {
+    "clean": "rm -rf node_modules",
     "dev": "rm -rf build; webpack-dev-server --content-base build/ --config webpack.dev.config.js --history-api-fallback --hot --inline"
   },
   "files": [

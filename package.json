@@ -2,7 +2,7 @@
   "name": "generator-react-ui",
   "version": "0.0.2",
   "description": "A generator for creating react apps that use material-ui and redux.",
-  "homepage": "kevcoxe.github.io/generator-react-ui",
+  "homepage": "https://github.com/kevcoxe/generator-react-ui",
   "author": {
     "name": "Kevin Coxe",
     "email": "kevcoxe@gmail.com",
@@ -52,6 +52,7 @@
     "url": "https://github.com/kevcoxe/generator-react-ui.git"
   },
   "scripts": {
+    "clean": "rm -rf node_modules generators/app/templates/node_modules",
     "prepublish": "gulp prepublish",
     "test": "gulp"
   },
