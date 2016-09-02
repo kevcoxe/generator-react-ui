@@ -1,0 +1,56 @@
+{
+  "name": "generator-react-material-redux",
+  "version": "0.0.0",
+  "description": "A generator for creating react apps that use material-ui and redux.",
+  "homepage": "kevcoxe.github.io/generator-react-material-redux",
+  "author": {
+    "name": "Kevin Coxe",
+    "email": "kevcoxe@gmail.com",
+    "url": "http://www.kevincoxe.com/"
+  },
+  "files": [
+    "generators"
+  ],
+  "main": "generators/index.js",
+  "keywords": [
+    "react",
+    "material-ui",
+    "redux",
+    "react-router",
+    "yeoman-generator"
+  ],
+  "dependencies": {
+    "chalk": "^1.0.0",
+    "lodash": "^4.15.0",
+    "mkdirp": "^0.5.1",
+    "yeoman-generator": "^0.23.0",
+    "yosay": "^1.0.0"
+  },
+  "devDependencies": {
+    "yeoman-test": "^1.0.0",
+    "yeoman-assert": "^2.0.0",
+    "eslint": "^3.1.1",
+    "eslint-config-xo-space": "^0.14.0",
+    "gulp": "^3.9.0",
+    "gulp-eslint": "^2.0.0",
+    "gulp-exclude-gitignore": "^1.0.0",
+    "gulp-line-ending-corrector": "^1.0.1",
+    "gulp-istanbul": "^1.0.0",
+    "gulp-mocha": "^2.0.0",
+    "gulp-plumber": "^1.0.0",
+    "gulp-nsp": "^2.1.0",
+    "gulp-coveralls": "^0.1.0"
+  },
+  "eslintConfig": {
+    "extends": "xo-space",
+    "env": {
+      "mocha": true
+    }
+  },
+  "repository": "kevcoxe/generator-react-material-redux",
+  "scripts": {
+    "prepublish": "gulp prepublish",
+    "test": "gulp"
+  },
+  "license": "MIT"
+}
