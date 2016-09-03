@@ -9,6 +9,7 @@ import {Grid, Row, Col} from 'react-flexbox-grid';
 
 import Header from './components/Header.jsx';
 import MyDrawer from './components/MyDrawer.jsx';
+import Footer from './components/Footer.jsx';
 
 import routes from './config/routes.json';
 
@@ -69,6 +70,7 @@ class Application extends React.Component {
           open={this.state.open}
           routes={routes}
         />
+        <Footer hidden={true} />
       </div>
     );
   }
