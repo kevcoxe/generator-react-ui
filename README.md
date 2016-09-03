@@ -7,8 +7,6 @@ Yeoman generator for React with Material-UI and Redux
 1. Install [yeoman](http://yeoman.io/): `npm install -g yo`
 2. Install this: `npm install -g generator-react-ui`
 
-> prepend with `sudo` if you are running on `*nix` OS.
-
 
 ## Use `generator-react-ui` ##
 `yo react-ui`
