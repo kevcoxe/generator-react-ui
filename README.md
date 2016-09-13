@@ -1,6 +1,6 @@
 [![Stories in Ready](https://badge.waffle.io/kevcoxe/generator-react-ui.svg?label=ready&title=Ready)](http://waffle.io/kevcoxe/generator-react-ui)
 # generator-react-ui
-Yeoman generator for React with Material-UI and Redux
+ Yeoman generator for React with Material-UI and Redux
 
 
 ## Prerequisites ##
