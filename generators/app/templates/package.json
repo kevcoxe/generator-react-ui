@@ -7,12 +7,16 @@
     "dev": "rm -rf build; webpack-dev-server --content-base build/ --config webpack.dev.config.js --history-api-fallback --hot --inline"
   },
   "files": [
+    ".babelrc",
     "font",
     "img",
     "js",
     "less",
     "index.html",
-    "webpack.config.js"
+    "index.html_vm",
+    "_package.json",
+    "webpack.config.js",
+    "webpack.prod.config.js"
   ],
   "keywords": [],
   "dependencies": {
