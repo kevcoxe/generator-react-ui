@@ -50,7 +50,6 @@ class Application extends React.Component {
 
   render() {
     const { route } = this.props;
-    console.log("app: ", this.props);
     const title = route.title || "Title"
 
     return (
