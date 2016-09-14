@@ -1,6 +1,6 @@
 {
   "name": "generator-react-ui",
-  "version": "0.0.12",
+  "version": "0.0.14",
   "description": "A generator for creating react apps that use material-ui and redux.",
   "homepage": "https://github.com/kevcoxe/generator-react-ui",
   "author": {
@@ -22,6 +22,7 @@
   ],
   "dependencies": {
     "chalk": "^1.0.0",
+    "jsonfile": "^2.3.1",
     "lodash": "^4.15.0",
     "mkdirp": "^0.5.1",
     "yeoman-generator": "^0.23.0",
