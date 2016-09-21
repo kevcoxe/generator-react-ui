@@ -43,13 +43,14 @@ Each each entry has a `key` which is the name of the route, `path` which is the 
 
 ```
 "index": {
-	"path":  "/",
-	"label": "Index"
+  "path":  "/",
+  "label": "Index"
 }
 ```
 
 
 # Links
+- [demo](https://kevcoxe.github.io/generator-react-ui/#/?_k=nybdg0)
 - [npm](https://www.npmjs.com/package/generator-react-ui)
 - [github](https://github.com/kevcoxe/generator-react-ui)
 
