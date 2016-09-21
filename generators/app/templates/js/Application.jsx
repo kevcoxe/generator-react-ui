@@ -6,6 +6,7 @@ import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import myTheme from './themes/theme.js';
 
 import {Grid, Row, Col} from 'react-flexbox-grid';
+import myFlexStyle from './styles/myFlexStyle.scss';
 
 import Header from './components/Header.jsx';
 import MyDrawer from './components/MyDrawer.jsx';
