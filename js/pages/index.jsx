@@ -1,9 +1,9 @@
 'use strict';
 
 import React from 'react';
+import { connect } from "react-redux";
 
 import { Grid, Row, Col } from 'react-flexbox-grid';
-import IconButton from 'material-ui/IconButton';
 import ActionCode from 'material-ui/svg-icons/action/code';
 import { List, ListItem } from 'material-ui/List';
 import Subheader from 'material-ui/Subheader';
@@ -17,6 +17,9 @@ class Index extends React.Component {
 
   constructor(props) {
     super(props);
+  }
+
+  componentDidMount() {
   }
 
   _openLink(src) {

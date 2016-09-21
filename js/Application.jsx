@@ -14,7 +14,6 @@ import Footer from './components/Footer.jsx';
 
 import routes from './config/routes.json';
 
-
 class Application extends React.Component {
 
   constructor(props) {
@@ -26,7 +25,7 @@ class Application extends React.Component {
 
 
   getChildContext() {
-    return {muiTheme: getMuiTheme(myTheme)};
+    return { muiTheme: getMuiTheme(myTheme) };
   }
 
 
