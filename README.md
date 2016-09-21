@@ -50,7 +50,7 @@ Each each entry has a `key` which is the name of the route, `path` which is the 
 
 
 # Links
-- [demo](https://kevcoxe.github.io/generator-react-ui/#/?_k=nybdg0)
+- [demo](https://kevcoxe.github.io/generator-react-ui)
 - [npm](https://www.npmjs.com/package/generator-react-ui)
 - [github](https://github.com/kevcoxe/generator-react-ui)
 
