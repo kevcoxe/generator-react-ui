@@ -9,7 +9,44 @@
 
 
 ## Use `generator-react-ui` ##
+To generate your app
+
 `yo react-ui`
+
+
+## Sub-generators
+
+### Action sub-generator
+Generate new action file
+
+`yo react-ui:action`
+
+*also generated from reducer*
+
+### Reducer sub-generator
+Generating new reducers
+
+`yo react-ui:reducer`
+
+This will prompt and ask if you want to generate an action.
+Uses a config file inside of `js/config/redux.json`.
+Will look for a reducer inside of `js/reducers/` for each entry inside of
+the config file.
+
+### Route sub-generator
+Generating routes
+
+`yo react-ui:route`
+
+Uses a config file inside of `js/config/routes.json`.
+Each each entry has a `key` which is the name of the route, `path` which is the path, and `label` which is what will be displayed in the side navbar.
+
+```
+"index": {
+	"path":  "/",
+	"label": "Index"
+}
+```
 
 
 # Links
