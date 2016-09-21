@@ -12,7 +12,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, 'build'),
-    publicPath: 'build/',
+    publicPath: './build/',
     filename: 'js/[hash].[name].bundle.js',
     chunkFilename: 'js/[hash].[id].bundle.js',
   },
@@ -63,7 +63,7 @@ module.exports = {
         warnings: false
       }
     }),
-    new ExtractTextPlugin('js/bundle.css', {allChunks: true}),
+    new ExtractTextPlugin('css/bundle.css', {allChunks: true}),
     new webpack.optimize.CommonsChunkPlugin('js/[hash].common.bundle.js'),
     new HtmlWebpackPlugin({
       title: 'generator-react-ui',
