@@ -11,9 +11,9 @@ module.exports = {
     index: './js/index.js'
   },
   output: {
-    path: __dirname,
-    filename: '[name].bundle.js',
-    chunkFilename: '[id].bundle.js',
+    path: path.resolve(__dirname, 'build'),
+    filename: 'js/[name].bundle.js',
+    chunkFilename: 'js/[id].bundle.js',
   },
   debug: true,
   devtool: 'source-map',

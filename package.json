@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "",
   "scripts": {
-    "dist": "rm -rf build; webpack --config webpack.prod.config.js",
+    "dist": "rm -rf build index.html; webpack --config webpack.prod.config.js",
     "start": "webpack-dev-server --content-base build/ --config webpack.config.js --history-api-fallback --hot --inline"
   },
   "files": [
