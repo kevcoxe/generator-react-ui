@@ -9,7 +9,6 @@
         <meta http-equiv="Cache-Control" content="no-siteapp" />
         <meta name="description" content="<%= htmlWebpackPlugin.options.description %>">
         <meta name="author" content="<%= htmlWebpackPlugin.options.username %>">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
         <% if (htmlWebpackPlugin.options.pushState) { %><base href="/"><% } %>
     </head>
