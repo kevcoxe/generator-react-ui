@@ -16,21 +16,15 @@ class MyCard extends React.Component {
 
   render() {
 
-    const { title, subtitle, content } = this.props
-
-    const cardData = (
-      <div>
-        <CardTitle title={title} subtitle={subtitle} />
-        <CardText>
-          { content }
-        </CardText>
-      </div>
-    );
+    const { title, subtitle } = this.props
 
     return (
       <Card>
-        { cardData }
-        { this.props.children }
+        <CardTitle title={title} subtitle={subtitle} />
+
+        <CardText>
+          { this.props.children }
+        </CardText>
       </Card>
     );
   }

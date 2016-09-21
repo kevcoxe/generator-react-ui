@@ -2,3 +2,7 @@ div[class*="flexboxgrid__col"] {
   margin-top: 10px;
   margin-bottom: 10px;
 }
+
+.muidocs-icon-custom-github:before {
+  content: "\e625";
+}

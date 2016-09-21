@@ -43,7 +43,7 @@ Object.keys(routes).map(requireComponents, routes);
 
 
 const AppRoutes = (
-  <Route path="/" component={Application} title={'<%= title %>'}>
+  <Route path="/" component={Application} title={'generator-react-ui'}>
     {Object.keys(routes).map(generateRoutes, routes)}
     <IndexRoute component={Index} />
   </Route>

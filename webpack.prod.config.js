@@ -11,7 +11,7 @@ module.exports = {
     index: './js/index.js'
   },
   output: {
-    path: path.resolve(__dirname, 'build'),
+    path: __dirname,
     filename: '[hash].[name].bundle.js',
     chunkFilename: '[hash].[id].bundle.js',
   },
@@ -65,9 +65,9 @@ module.exports = {
     new ExtractTextPlugin('bundle.css', {allChunks: true}),
     new webpack.optimize.CommonsChunkPlugin('[hash].common.bundle.js'),
     new HtmlWebpackPlugin({
-      title: '<%= title %>',
-      description: '<%= description %>',
-      username: '<%= author %>',
+      title: 'generator-react-ui',
+      description: 'A gh-page for generator-react-ui',
+      username: 'Kevin Coxe',
       filename: 'index.html',
       inject: 'body',
       template: 'index.html_vm',

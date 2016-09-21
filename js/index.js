@@ -1,18 +1,18 @@
 /**
  *  index.js, the starter.
  *
- *  @author  <%= author %>
+ *  @author  Kevin Coxe
  *
  */
 'use strict';
 
 require.ensure([
     'less/main.less',
-    '../js/fw/Entrance'
+    './fw/Entrance'
 ], function(require) {
 
     require('less/main.less');
 
-    var Entrance = require('../js/fw/Entrance').default;
+    var Entrance = require('./fw/Entrance').default;
     (new Entrance()).run();
 });
