@@ -77,10 +77,11 @@ class Header extends React.Component {
             primary={true}
             badgeStyle={{top: 12, right: 12}}
           >
-            <IconButton>
+            <IconButton
+              onClick={this._openLink.bind(this, "https://www.npmjs.com/package/generator-react-ui")}
+            >
               <FileFileDownload
                 color={"white"}
-                onClick={this._openLink.bind(this, "https://www.npmjs.com/package/generator-react-ui")}
               />
             </IconButton>
           </Badge>
