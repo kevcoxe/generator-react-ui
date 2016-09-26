@@ -1,4 +1,5 @@
 [![Stories in Ready](https://badge.waffle.io/kevcoxe/generator-react-ui.svg?label=ready&title=Ready)](http://waffle.io/kevcoxe/generator-react-ui)
+[![npm](https://img.shields.io/npm/dt/generator-react-ui.svg?maxAge=2592000)](https://www.npmjs.com/package/generator-react-ui)
 # generator-react-ui
  Yeoman generator for React with Material-UI and Redux
 
