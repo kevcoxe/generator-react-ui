@@ -1,7 +1,7 @@
 
 export default function reducer(state={
   fetching: false,
-  fetched: false,
+  fetched: true,
   <%= name %>: [],
   error: null
 }, action) {
@@ -9,13 +9,15 @@ export default function reducer(state={
 
     case "FETCH_<%= actionName %>_PENDING": {
       return {...state,
-        fetching: true
+        fetching: true,
+        fetched: false
       };
       break;
     }
     case "FETCH_<%= actionName %>_REJECTED": {
       return {...state,
         fetching: false,
+        fetched: true,
         error: action.payload
       };
       break;
@@ -23,7 +25,7 @@ export default function reducer(state={
     case "FETCH_<%= actionName %>_FULFILLED": {
       return {...state,
         fetching: false,
-        fetched: false,
+        fetched: true,
         <%= name %>: [...state.<%= name %>]
       };
       break;
