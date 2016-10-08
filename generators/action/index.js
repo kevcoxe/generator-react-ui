@@ -4,6 +4,7 @@ var yeoman = require('yeoman-generator');
 var jsonfile = require('jsonfile');
 var _ = require('lodash');
 var chalk = require('chalk');
+var utils = require('./utils/index');
 
 module.exports = yeoman.Base.extend({
   constructor: function() {
@@ -28,19 +29,19 @@ module.exports = yeoman.Base.extend({
       },
     ];
 
-    if(this.name !== ''|| !_.isUndefined(this.name)) {
-      this.functionName = _.camelCase(`get ${this.name}`);
-      this.actionName = _.upperCase(this.name);
+    if(this.name !== '' || typeof this.name !== 'undefined' ) {
+      this.functionName = utils.camelCase(`get ${this.name}`);
+      this.actionName = this.name.toUpperCase();
       this.path = `${this.name}Actions.js`;
       return;
     } else {
       return this.prompt(prompts).then(function (props) {
         this.props = props;
 
-        if(this.props.reducerName !== ''|| !_.isUndefined(this.props.reducerName)) {
-          this.name = _.camelCase(props.reducerName);
-          this.functionName = _.camelCase(`get ${this.name}`);
-          this.actionName = _.upperCase(this.name);
+        if(this.props.reducerName !== '' || typeof this.props.reducerName !== 'undefined' ) {
+          this.name = utils.camelCase(props.reducerName);
+          this.functionName = utils.camelCase(`get ${this.name}`);
+          this.actionName = this.name.toUpperCase()
           this.path = `${this.name}Actions.js`;
         } else {
           this.skipBuild = true;

@@ -6,6 +6,7 @@ var chalk = require('chalk');
 var yosay = require('yosay');
 var _ = require('lodash');
 var mkdirp = require('mkdirp');
+var utils = require('./utils/index');
 
 module.exports = yeoman.Base.extend({
 
@@ -158,7 +159,7 @@ module.exports = yeoman.Base.extend({
         this.templatePath('_package.json'),
         this.destinationPath('package.json'),
         {
-          name: _.camelCase(this.answers.name),
+          name: utils.camelCase(this.answers.name),
           version: this.answers.version,
           description: this.description,
           author: this.answers.username,
@@ -225,5 +226,3 @@ module.exports = yeoman.Base.extend({
 
 
 });
-
-
