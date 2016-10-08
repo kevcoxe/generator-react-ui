@@ -1,7 +1,7 @@
 
 module.exports = {
 
-  capitalize: function functionName(string) {
+  capitalize: function (string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
   },
 
