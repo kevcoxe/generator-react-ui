@@ -8,14 +8,14 @@ import Application from '../Application.jsx';
 import Index from '../pages/index.jsx';
 
 import routes from '../config/routes.json';
-
+var utils = require('./utils/index');
 
 const components = {};
 
 function requireComponents(routeName) {
   const route = this[routeName.split('/').pop()];
 
-  const componentName   = routeName.split('/').map(_.camelCase).join('/');
+  const componentName   = routeName.split('/').map(utils.camelCase).join('/');
   components[routeName] = require(`../pages/${componentName}.jsx`).default;
 
   if (_.isPlainObject(route.routes)) {
@@ -50,4 +50,3 @@ const AppRoutes = (
 );
 
 export default AppRoutes;
-

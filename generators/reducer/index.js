@@ -4,6 +4,7 @@ var yeoman = require('yeoman-generator');
 var jsonfile = require('jsonfile');
 var _ = require('lodash');
 var chalk = require('chalk');
+var utils = require('./utils/index');
 
 module.exports = yeoman.Base.extend({
   constructor: function() {
@@ -50,8 +51,8 @@ module.exports = yeoman.Base.extend({
       this.props = props;
       this.createAction = this.props.createAction;
 
-      if(this.props.reducerName !== ''|| !_.isUndefined(this.props.reducerName)) {
-        this.name = _.camelCase(props.reducerName) || "test";
+      if(this.props.reducerName !== '' || typeof this.props.reducerName !== 'undefined' ) {
+        this.name = utils.camelCase(props.reducerName) || "test";
         this.path = `${this.name}Reducer.js`;
       } else {
         this.skipBuild = true;
@@ -95,7 +96,7 @@ module.exports = yeoman.Base.extend({
           this.destinationPath(`js/reducers/${this.path}`),
           {
             name: this.name,
-            actionName: _.upperCase(this.name)
+            actionName: this.name.toUpperCase()
           }
         );
       }

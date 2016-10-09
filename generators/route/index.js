@@ -4,6 +4,7 @@ var yeoman = require('yeoman-generator');
 var jsonfile = require('jsonfile');
 var _ = require('lodash');
 var chalk = require('chalk');
+var utils = require('./utils/index');
 
 module.exports = yeoman.Base.extend({
   constructor: function() {
@@ -43,9 +44,9 @@ module.exports = yeoman.Base.extend({
     return this.prompt(prompts).then(function (props) {
       this.props = props;
 
-      if(this.props.routeName !== ''|| !_.isUndefined(this.props.routeName)) {
-        this.path = _.camelCase(props.routeName);
-        this.name = _.capitalize(props.routeName);
+      if(this.props.routeName !== ''|| typeof this.props.routeName !== 'undefined' ) {
+        this.path = utils.camelCase(props.routeName);
+        this.name = utils.capitalize(props.routeName);
       } else {
         this.skipBuild = true;
       }
@@ -80,7 +81,7 @@ module.exports = yeoman.Base.extend({
           this.templatePath('pageTemplate.jsx'),
           this.destinationPath(`js/pages/${this.path}.jsx`),
           {
-            componentName: _.capitalize(this.path),
+            componentName: utils.capitalize(this.path),
             name: this.name
           }
         );
