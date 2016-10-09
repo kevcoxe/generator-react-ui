@@ -2,9 +2,8 @@
 
 var yeoman = require('yeoman-generator');
 var jsonfile = require('jsonfile');
-var _ = require('lodash');
 var chalk = require('chalk');
-var utils = require('./utils/index');
+var utils = require('../utils/index');
 
 module.exports = yeoman.Base.extend({
   constructor: function() {
@@ -12,7 +11,7 @@ module.exports = yeoman.Base.extend({
 
     this.file = "js/config/redux.json";
     this.oldJson = jsonfile.readFileSync(this.file);
-    this.newJson = _.extend({}, this.oldJson);
+    this.newJson = Object.assign({}, this.oldJson);
     this.skipBuild = false;
   },
 

@@ -6,7 +6,7 @@ var chalk = require('chalk');
 var yosay = require('yosay');
 var _ = require('lodash');
 var mkdirp = require('mkdirp');
-var utils = require('./utils/index');
+var utils = require('../utils/index');
 
 module.exports = yeoman.Base.extend({
 
