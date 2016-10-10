@@ -18,7 +18,7 @@ function requireComponents(routeName) {
   const componentName   = routeName.split('/').map(utils.camelCase).join('/');
   components[routeName] = require(`../pages/${componentName}.jsx`).default;
 
-  if (_.isPlainObject(route.routes)) {
+  if (utils.isPlainObject(route.routes)) {
     Object.keys(route.routes)
       .map(subrouteName => `${routeName}/${subrouteName}`)
       .map(requireComponents, route.routes);
