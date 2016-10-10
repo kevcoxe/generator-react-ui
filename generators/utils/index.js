@@ -20,6 +20,20 @@ module.exports = {
 
   isUndefined: function (string) {
     return typeof string === "undefined";
+  },
+
+  isPlainObject: function (value) {
+    if ( typeof value === 'object' && value !== null) {
+
+      if (typeof Object.getPrototypeOf === 'function') {
+        var proto = Object.getPrototypeOf(value);
+        return proto === Object.prototype || proto === null;
+      }
+
+      return Object.prototype.toString.call(value) === '[object Object]';
+    }
+
+    return false;
   }
 
 };
