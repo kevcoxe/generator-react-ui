@@ -69,6 +69,8 @@ Each each entry has a `key` which is the name of the route, `path` which is the 
 # Authors
 - [kevcoxe](https://github.com/kevcoxe)
 
+# Contributors
+- [antonioyee](https://github.com/antonioyee)
 
 ## LICENSE ##
 [MIT License](https://raw.githubusercontent.com/kevcoxe/generator-react-ui/master/LICENSE)
