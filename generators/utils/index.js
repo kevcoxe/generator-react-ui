@@ -12,6 +12,14 @@ module.exports = {
       }
       return p1.toLowerCase();
     });
+  },
+
+  //kebabCase: function (string) {
+  //  return string;
+  //},
+
+  isUndefined: function (string) {
+    return typeof string === "undefined";
   }
 
 };

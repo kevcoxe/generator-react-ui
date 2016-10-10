@@ -2,9 +2,8 @@
 
 var yeoman = require('yeoman-generator');
 var jsonfile = require('jsonfile');
-var _ = require('lodash');
 var chalk = require('chalk');
-var utils = require('./utils/index');
+var utils = require('../utils/index');
 
 module.exports = yeoman.Base.extend({
   constructor: function() {
