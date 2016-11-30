@@ -35,7 +35,7 @@
     "react-redux": "^4.4.5",
     "react-router": "^2.7.0",
     "react-swipeable-views": "^0.7.1",
-    "react-tap-event-plugin": "^1.0.0",
+    "react-tap-event-plugin": "git+https://github.com/zilverline/react-tap-event-plugin.git#master",
     "redux": "^3.5.2",
     "redux-logger": "^2.6.1",
     "redux-promise-middleware": "^4.0.0",

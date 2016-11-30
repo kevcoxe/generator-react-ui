@@ -1,6 +1,6 @@
 {
   "name": "generator-react-ui",
-  "version": "0.0.18",
+  "version": "0.0.19",
   "description": "A generator for creating react apps that use material-ui and redux.",
   "homepage": "https://github.com/kevcoxe/generator-react-ui",
   "author": {
