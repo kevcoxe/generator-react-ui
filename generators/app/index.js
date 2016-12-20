@@ -145,7 +145,7 @@ module.exports = yeoman.Base.extend({
 
       // js/utils
       this.fs.copy(
-        this.templatePath('../utils/'),
+        this.templatePath('../../utils/'),
         this.destinationPath('js/utils/')
       );
 
