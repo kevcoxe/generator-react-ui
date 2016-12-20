@@ -8,7 +8,7 @@ import Application from '../Application.jsx';
 import Index from '../pages/index.jsx';
 
 import routes from '../config/routes.json';
-var utils = require('./utils/index');
+var utils = require('../utils/index');
 
 const components = {};
 

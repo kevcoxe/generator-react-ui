@@ -3,7 +3,7 @@ import { combineReducers } from "redux";
 
 import reduxData from '../config/redux.json';
 import test from './testReducer.js';
-var utils = require('./utils/index');
+var utils = require('../utils/index');
 
 const components = {};
 
