@@ -4,7 +4,6 @@ var path = require('path');
 var yeoman = require('yeoman-generator');
 var chalk = require('chalk');
 var yosay = require('yosay');
-var _ = require('lodash');
 var mkdirp = require('mkdirp');
 var utils = require('../utils/index');
 
@@ -93,7 +92,7 @@ module.exports = yeoman.Base.extend({
 
   default: function () {
     if (path.basename(this.destinationPath()) !== this.answers.name) {
-      var kebabed = _.kebabCase(this.answers.name);
+      var kebabed = utils.kebabCase(this.answers.name);
 
       this.log(
         'Your app must be inside a folder named ' + kebabed + '\n' +

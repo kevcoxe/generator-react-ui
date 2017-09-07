@@ -30,7 +30,7 @@ function generateRoutes(routeName) {
 
   return (
     <Route path={route.path} component={components[routeName]} key={routeName}>
-      {_.isPlainObject(route.routes) ?
+      {utils.isPlainObject(route.routes) ?
         Object.keys(route.routes)
         .map(subrouteName => `${routeName}/${subrouteName}`)
         .map(generateRoutes, route.routes)

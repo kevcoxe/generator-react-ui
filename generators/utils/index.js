@@ -14,9 +14,17 @@ module.exports = {
     });
   },
 
-  //kebabCase: function (string) {
-  //  return string;
-  //},
+  kebabCase: function (string) {
+    var result = string.replace(/([a-z][A-Z])/g, (match) => {
+      return match.substr(0, 1) + '-' + match.substr(1, 1).toLowerCase();
+    });
+
+    result = result.toLowerCase();
+
+    result = result.replace(/[^-a-z0-9]+/g, '-');
+
+    return result.replace(/^-+/, '').replace(/-$/, '');;
+  },
 
   isUndefined: function (string) {
     return typeof string === "undefined";
@@ -36,4 +44,12 @@ module.exports = {
     return false;
   }
 
+};
+
+Object.prototype.extend = function(obj) {
+    for (var i in obj) {
+        if (obj.hasOwnProperty(i)) {
+            this[i] = obj[i];
+        }
+    }
 };
